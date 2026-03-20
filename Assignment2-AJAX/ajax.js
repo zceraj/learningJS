@@ -4,5 +4,5 @@ ajaxRequest.addEventListener('readystatechange', function(r) {
     console.log(r.target.response);
   }
 });
-ajaxRequest.open("GET", "https://api.github.com/users/cassidoo", true);
+ajaxRequest.open("GET", "https://api.github.com/users/zceraj", true);
 ajaxRequest.send();
