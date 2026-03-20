@@ -1,8 +1,5 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const button = document.getElementById('theme');
-  if (!button) return; // In case the HTML/ID doesn't match
+document.getElementById('theme').addEventListener('click', function(){ 
+  document.body.classList.toggle('theme2');
+}); 
 
-  button.addEventListener('click', () => {
-    document.body.classList.toggle('theme2');
-  });
-});
+// had to move around the relative path of the files 
