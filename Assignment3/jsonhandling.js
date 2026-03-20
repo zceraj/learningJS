@@ -5,7 +5,6 @@ document.getElementsByTagName('button')[0].addEventListener('click', function(r)
   getUser(document.getElementsByTagName('input')[0].value);
 });
 
-
 function getUser(name) {
   fetch('https://api.github.com/users/' + name)
     .then(function(r) {
@@ -18,7 +17,6 @@ function getUser(name) {
     })
 }
 
-// a bunch of selectors, my more intutitve way to do it 
 function assignValues() {
   document.getElementById('loader').style = 'display: none';
 
@@ -41,13 +39,10 @@ function getFollowers(url) {
     });
 }
 
-// standard foreach loop --> creates a list element 
 function listFollowers() {
   followers.forEach(function(f) {
     var li = document.createElement('li');
-    // url of the follower 
     li.innerHTML = '<a href="' + f.html_url + '">'
-    // if you hover on the follower you get their username 
       + '<img src="' + f.avatar_url + '" alt="' + f.login + '"/>'
       + '</a>';
     document.getElementById('list').appendChild(li);
